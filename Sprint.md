@@ -1,23 +1,29 @@
 
 # Sprint 1: Protocols Design Journal
+TDF Design Journal fall 2025, IND
+Rose Qi
 
 ##  1.1: microcontroller -> human
 Process: 
 - Install ESP32 board
 - Upload files
 
+<img width="686" height="495" alt="image" src="https://github.com/user-attachments/assets/cf0012d4-4993-4289-8e7f-78684cfe4750" />
+<img width="498" height="118" alt="image" src="https://github.com/user-attachments/assets/1eb4e630-2d2c-4b2d-a239-0ade6c38f371" />
+
 Challenges & Learning:
-- When downloading the Esp 32 driver, I encountered problem with using the wrong link, then with the correct link, I was able to successfully download and upload codes onto ESP 32
-- When setting us the board, I had trouble with connecting and I learned that when choosing port, can tell from th ename of port, boards are usually named wtarting with usb
-- The bit rate needs to change according to the board to 115200 from the tools colum\
+- When downloading the ESP32 driver, I first used the wrong link, but after finding the correct one, I was able to successfully download it and upload code onto the ESP32.
+- When setting up the board, I had trouble connecting. I learned that when choosing the port, you can identify it by name; board ports usually starts with "usbserial"
+- The upload speed needs to be set to 115200 from the tools menu.
+  <img width="179" height="76" alt="image" src="https://github.com/user-attachments/assets/541dcd75-654e-437c-9ab0-82674289919d" />
 - Added code: serial begin , serial delay to have it shows up on the serial moniter.
 
-
-Photo/video
-caption
 ### 01_helloworld
+<img width="660" height="580" alt="image" src="https://github.com/user-attachments/assets/b2348f91-dd37-4bb9-a2a5-8e52d996f679" />
 ### 02_helloworld_spell
+<img width="529" height="473" alt="image" src="https://github.com/user-attachments/assets/d30b5fd6-d0f4-4790-94f5-1f51ceb9defc" />
 ### 03_altering_periodicity
+
 ### 04_make_it_blink
 ### 05_make_it_blink_outside
 <img src="https://github.com/user-attachments/assets/abca07ad-1cf5-415d-8d9a-70da682e0dfc" width="200">
