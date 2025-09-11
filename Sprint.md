@@ -38,8 +38,10 @@ https://github.com/user-attachments/assets/528a8cc0-91f4-4546-9cb8-7a349695462a
 
 #### Challenge Questions
 - how can we employ singular data types (primitives) used for the serial monitor communication:  what do we need to change in the serial printing methods?
+
   For singular data types, change the format specifier in Serial.printf() to match the type.
 - arrays:  how can we use arrays in the serial printing methods via Serial.printf() ?
+
   For arrays, loop through and print each element.
 
 
