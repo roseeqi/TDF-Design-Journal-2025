@@ -20,7 +20,9 @@ caption
 ### 03_altering_periodicity
 ### 04_make_it_blink
 ### 05_make_it_blink_outside
-<img width="341" height="498" alt="image" src="https://github.com/user-attachments/assets/abca07ad-1cf5-415d-8d9a-70da682e0dfc" />
+<img src="https://github.com/user-attachments/assets/abca07ad-1cf5-415d-8d9a-70da682e0dfc" width="200">
+<img width="383" height="340" alt="image" src="https://github.com/user-attachments/assets/ef8b1cfc-ffe4-4004-b602-620646a09919" />
+
 
 
 **challenges for design journal: **
