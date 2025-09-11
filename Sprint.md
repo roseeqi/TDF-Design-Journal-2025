@@ -8,14 +8,16 @@ Process:
 - Upload files
 
 
-
 Challenges & Learning:
 - When downloading the ESP32 driver, I first used the wrong link, but after finding the correct one, I was able to successfully download it and upload code onto the ESP32.
 - When setting up the board, I had trouble connecting. I learned that when choosing the port, you can identify it by name; board ports usually starts with "usbserial"
+
   <img width="300" height="495" alt="image" src="https://github.com/user-attachments/assets/cf0012d4-4993-4289-8e7f-78684cfe4750" />
 - The upload speed needs to be set to 115200 from the tools menu.
+
   <img width="300" height="100" alt="image" src="https://github.com/user-attachments/assets/1eb4e630-2d2c-4b2d-a239-0ade6c38f371" />
 - Added code: serial begin , serial delay to have it shows up on the serial moniter.
+
   <img width="179" height="100" alt="image" src="https://github.com/user-attachments/assets/541dcd75-654e-437c-9ab0-82674289919d" />
 
 #### 01_helloworld
@@ -70,24 +72,31 @@ Process
 - Read values and printed them to serial monitor.
 
 Challenge & Learning:
+
+
 - Reading fluctuated, I changed it slower by adding delay
   
-https://github.com/user-attachments/assets/e2e70009-b8cf-435c-a6b4-0ce5d9ed44c7
+https://github.com/user-attachments/assets/380ff0c4-13a3-431b-95d4-dcad1fd9eddd
+
 Board APDZS-9960 recognizing color
 
 https://github.com/user-attachments/assets/b1d105fb-26df-42d9-80dd-f9fbab584800
+
 Board APDZS-9960 recognizing gesture
 
 
 https://github.com/user-attachments/assets/9183fec2-6f2d-4416-960e-2362b9696021
+
 Board APDZS-9960 recognizing proximity
 
 
 https://github.com/user-attachments/assets/22624717-e717-4290-8a4e-09c645a530cc
+
 Board APDZS-9960 with accelgyro
 
 #### Integration: Brightness & distance reactive LEDs
 This sketch used an APDS-9960 color sensor and an ultrasonic distance sensor. The APDS-9960 color sensor decides which LED is active. Green LED turns on under bright light, and red LED in dim light. The ultrasonic sensor measures distance, and the closer the object is, the faster the active LED blinks. 
+
 https://github.com/user-attachments/assets/9c7fd7a4-c57a-496c-92cd-e5e6569889ab
 
 
