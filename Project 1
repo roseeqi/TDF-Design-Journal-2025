@@ -1,1 +1,22 @@
-1
+
+
+9/26 steps of setting up codes
+Phase 1: Basic Setup 
+Step 1.1 - Test cam functionality and display real-time video
+Phase 2: Background Removal
+Step 2.1 - Person segmentation with black background using MediaPipe
+Phase 3: Emotion Recognition
+Step 3.1 - Install DeepFace and test emotion detection on static image
+Step 3.2 - Real-time emotion detection and display results on screen
+Phase 4: Facial Landmarks
+Step 4.1 - Install dlib and download facial landmark predictor model
+Step 4.2 - Display 68 facial landmarks on real-time video feed
+Phase 5: First Exaggeration Effect
+Step 5.1 - Smile amplification by enlarging mouth area 30%
+Step 5.2 - Test and adjust exaggeration intensity for creepy effect
+Phase 6: Full Emotion Exaggeration 
+Step 6.1 - Add exaggeration rules for all emotions (sad, surprised, angry, etc.)
+Step 6.2 - Optimize performance and fine-tune warping effects
+Phase 7: Visual Enhancement
+Step 7.1 - Add filters for extra creepy effect (high contrast, edge glow, color grading)
+
