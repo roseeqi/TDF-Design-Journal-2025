@@ -1,0 +1,15 @@
+
+Setting up: （Step 0-6 in instruction）
+
+(base) qitianyu@wifi-10-41-165-57 ~ % python3 --version
+Python 3.9.13
+(base) qitianyu@wifi-10-41-165-57 ~ % pipx list
+zsh: command not found: pipx
+bash-3.2$ cd Desktop/TDF/pytorch_examples/
+bash-3.2$ python3 -m venv cv_venv
+bash-3.2$ source cv_venv/bin/activate
+(cv_venv) bash-3.2$ pip install -r requirements.txt
+WARNING: You are using pip version 22.0.4; however, version 25.2 is available.
+You should consider upgrading via the '/Users/qitianyu/Desktop/TDF/pytorch_examples/cv_venv/bin/python3 -m pip install --upgrade pip' command.
+(cv_venv) bash-3.2$ 
+
