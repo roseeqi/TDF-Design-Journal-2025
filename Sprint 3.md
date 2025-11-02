@@ -1,19 +1,20 @@
-Sprint 3: APIs + LLMs using ZV1
+## Sprint 3: APIs + LLMs using ZV1
+
 Rose Qi TDF Independent session
 
-Introduction:
+## Introduction:
 In this sprint, 
 This sprint is about exploring and understanding how to build conversational AI agents using the Zerowidth platform. Through this project, I'm expected to learn how different components work together to create an intelligent assistant, practice prompt engineering and system design skills, and get familiar with Large Language Model (LLM) parameters and their effects on agent behavior.
 
-Goal:
+## Goal:
 My goal for this sprint is to create a helpful agent that can provide care advice for sick cats. As a cat owner, I wanted to build something practical that could help people understand when their cat might need attention and what basic care steps they can take.
 
-Process:
-1. 
+## Process:
+## **1. **
 To begin this journey, I first explored the Zerowidth interface to understand how the platform works. I learned about the different modules available and how they connect to each other. Then, I moved to the Orchestrate interface where I started building my first demo. This basic demo consisted of three simple components: a text input node where users can type their questions, a chat agent node that processes the input using an LLM, and a chat output node that displays the assistant's response. This foundational setup helped me understand the basic flow of information in a conversational agent before adding more complex features.
 <img width="1202" height="696" alt="image" src="https://github.com/user-attachments/assets/aca73471-77d6-4ec9-a865-7906e0eacd6f" />
 
-2.
+**2.**
 In this step, I added a data input module to provide the agent with more context about how it should behave. I created a structured template that defines the agent's persona, audience, tone, and communication style. This template includes:
 Persona: The agent's identity and background
 Audience: Who the agent is talking to and their knowledge level
@@ -21,7 +22,7 @@ Tone & Voice: How the agent should communicate (calm, direct, using short senten
 Calibration: Rules about prioritizing safety and accuracy
 I linked this data input into the system prompt session so the agent could access this information when responding to users.
 
-Detail input texts:
+**Detail input texts:**
 Persona
 - Identity: **({persona_label_e.g.\_Pragnatic_Staff_Engineer)}**
 - Background: {{2-3_sentence_background})
@@ -39,18 +40,18 @@ Tone & Voice
 Calibration
 If the requested tone conflicts with safety/accuracy, prefer safety/accuracy and explain the adjustment.
 
-Testing the Configuration
+**Testing the Configuration**
 To test if the agent understood its role, I asked: "Hi, what is my purpose?"
 The agent replied:
 "Hi! Your purpose is something personal and unique to you. It often relates to what gives your life meaning, fulfillment, or impact. If you'd like, I can help you explore your strengths, values, and goals to discover what feels most purposeful to you. Would you like to talk about that?"
 
-What I learned:
+**What I learned:**
 The agent gave a generic, philosophical response instead of answering based on its defined persona. This happened because the system prompt was not properly configured to reference the data input. The agent didn't "know" it should act according to the persona template I created. It simply responded as a general-purpose assistant would.
 This taught me an important lesson: just adding a data input module is not enough. I need to explicitly tell the agent in the system prompt to use that information and follow those guidelines. The connection between data input and behavior requires clear instructions in the system prompt itself.
 <img width="1148" height="762" alt="image" src="https://github.com/user-attachments/assets/958ae3d6-4844-4378-a6e6-27992d6b5ddb" />
 
 
-3.
+**3.**
 With my goal of building a cat care assistant in mind, I completely rewrote the system prompt to give it a specific persona and clear guidelines. I focused on several key elements:
 Persona Definition: I told the agent it is a "Cat Care Assistant" - a knowledgeable and caring helper for cat owners. This gives it a clear identity instead of being a general-purpose chatbot.
 Role and Responsibilities: I explained what the agent should help with (understanding symptoms, providing basic care advice) and what it should NOT do (diagnose diseases - only vets can do that).
