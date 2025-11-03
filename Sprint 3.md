@@ -10,11 +10,11 @@ This sprint is about exploring and understanding how to build conversational AI 
 My goal for this sprint is to create a helpful agent that can provide care advice for sick cats. As a cat owner, I wanted to build something practical that could help people understand when their cat might need attention and what basic care steps they can take.
 
 ## Process:
-## **1. **
+## 1.
 To begin this journey, I first explored the Zerowidth interface to understand how the platform works. I learned about the different modules available and how they connect to each other. Then, I moved to the Orchestrate interface where I started building my first demo. This basic demo consisted of three simple components: a text input node where users can type their questions, a chat agent node that processes the input using an LLM, and a chat output node that displays the assistant's response. This foundational setup helped me understand the basic flow of information in a conversational agent before adding more complex features.
 <img width="1202" height="696" alt="image" src="https://github.com/user-attachments/assets/aca73471-77d6-4ec9-a865-7906e0eacd6f" />
 
-**2.**
+## 2.
 In this step, I added a data input module to provide the agent with more context about how it should behave. I created a structured template that defines the agent's persona, audience, tone, and communication style. This template includes:
 Persona: The agent's identity and background
 Audience: Who the agent is talking to and their knowledge level
@@ -51,7 +51,7 @@ This taught me an important lesson: just adding a data input module is not enoug
 <img width="1148" height="762" alt="image" src="https://github.com/user-attachments/assets/958ae3d6-4844-4378-a6e6-27992d6b5ddb" />
 
 
-**3.**
+## 3.
 With my goal of building a cat care assistant in mind, I completely rewrote the system prompt to give it a specific persona and clear guidelines. I focused on several key elements:
 Persona Definition: I told the agent it is a "Cat Care Assistant" - a knowledgeable and caring helper for cat owners. This gives it a clear identity instead of being a general-purpose chatbot.
 Role and Responsibilities: I explained what the agent should help with (understanding symptoms, providing basic care advice) and what it should NOT do (diagnose diseases - only vets can do that).
@@ -74,7 +74,7 @@ Asks a relevant follow-up question to start a helpful conversation
 This success shows that a well-crafted system prompt is essential for creating an agent with a clear persona. The agent needs explicit instructions about its identity, communication style, and boundaries. When these elements are clearly defined, the agent behaves exactly as intended.
 <img width="1197" height="600" alt="image" src="https://github.com/user-attachments/assets/0cdc3a7e-112a-4b2d-abaa-deb640cf16fd" />
 
-4.
+## 4.
 temperature 
 Before starting my experiments, I needed to understand what temperature actually means in the context of Large Language Models. THrough research, I learned that temperature is a parameter that controls how random or predictable the AI's responses are. with a range from 0 to 2, where lower values make the model more focused and consistent, while higher values make it more creative and unpredictable. I wanted to test this myself to see how it would affect my cat care assistant's behavior.
 
@@ -128,7 +128,7 @@ I chose 0.7 because it offers the best balance for my specific use case. It's cr
 This experiment taught me that temperature is not just a technical parameter - it fundamentally shapes the personality and reliability of an AI assistant. Choosing the right value requires understanding both what the assistant needs to do and how users will feel when interacting with it.
 
 
-5. 
+## 5. 
 I uploaded a PDF document called General-Cat-Care.pdf from the ASPCA (American Society for the Prevention of Cruelty to Animals), which is a highly respected animal welfare organization. This document contains comprehensive information about cat care, including feeding guidelines, grooming tips, health concerns, vaccination schedules, and emergency symptoms that require immediate veterinary attention.I chose this document specifically because:
 
 It comes from a credible, authoritative source (ASPCA)
@@ -180,7 +180,7 @@ Finally, I needed to test what happens when the answer isn't in the knowledge ba
 <img width="1219" height="605" alt="image" src="https://github.com/user-attachments/assets/f857aa9c-0df2-4c3f-afb2-aeebf41ddd1a" />
 The agent responded exactly as I hoped: "I don't have specific information about cat breeds and apartment living in my knowledge base. I recommend consulting with a veterinarian or a cat breed expert." It didn't try to make up an answer or rely on its general training to guess. This honest response proved that my tailored system prompt was working
 
-6.
+## 6.
 Up until this point, I had been using OpenAI's GPT-4.1 Mini as the brain of my cat care assistant. However, I realized that different LLM models have different strengths, weaknesses, and characteristics. Some might be better at following instructions, others might be more empathetic, and some might be faster or more cost-effective. To build the best possible assistant, I needed to test multiple models and understand what each one offers.
 
 I decided to compare three different models available in Zerowidth: OpenAI GPT-4.1 Mini, Google Gemini 2.0 Flash, and Claude 3.5 Sonnet. To make this a fair comparison, I used the exact same system prompt, knowledge base, and temperature setting (0.7) across all three models. The only variable that changed was the model itself.
@@ -251,7 +251,7 @@ After testing all three models, I decided to use Claude 3.5 Sonnet as the LLM fo
 - Most helpful in emergencies: When someone's cat is sick, they need more than just "go to the vet." They need to know what to do while getting there, what not to do, and what to expect. Claude provided this level of detail.
 - Transparent about sources: Claude explicitly mentioned using the knowledge base, which builds trust. Users know the advice isn't just the AI's opinion - it's based on curated, authoritative information.
 
-7.
+## 7.
 Implementing RAG (Retrieval-Augmented Generation) - My Personalization Project
 I decided to implement a RAG (Retrieval-Augmented Generation) system. This was not part of the basic demos provided in class, and it represents a more advanced approach to building AI assistants with knowledge bases. The key difference from my previous basic setup is that RAG actively searches through the knowledge base to find the most relevant sections before generating a response. In my earlier version, the LLM had access to the entire knowledge base but had to process all of it. With RAG, the system first retrieves only the relevant chunks, then uses those specific pieces to generate an answer. This should make responses more focused and accurate.
 
@@ -283,9 +283,15 @@ However, this exercise was valuable because it showed me how professional AI sys
 This personalization project successfully combined system prompts, knowledge base integration, and model selection - all elements from earlier steps in the sprint. It also introduced me to retrieval systems and gave me hands-on experience with a technique I'll encounter in more advanced AI development.
 
 
-8.
+## 8.
 System Flow Diagram
 <img width="2845" height="4252" alt="deepseek_mermaid_20251102_2a04d9" src="https://github.com/user-attachments/assets/052c12a8-2bbe-478b-a814-9170cadbff34" />
 
 This diagram illustrates how information flows through my RAG-based cat care assistant. The user's question enters at the top, triggers a semantic search of the ASPCA knowledge base, retrieves relevant chunks, combines them with the system prompt, sends the combined context to claude ai, and finally returns a generated response to the user. The key innovation is the search-then-generate approach, which differs from simply giving the model access to all documents at once.
 
+## Final Reflection: What I Learned from This Sprint
+Looking back at this sprint, I'm surprised how much my understanding of AI assistants has evolved. After working through system prompts, temperature settings, knowledge bases, and RAG implementation, I realize that building a good AI assistant requires careful design decisions at every step.
+The most important lesson I learned is that AI assistants need clear boundaries and instructions to be useful. My early tests gave generic responses because I hadn't defined the agent's role. Once I created a detailed system prompt explaining it's a cat care assistant with specific responsibilities,  the agent became focused, helpful, and reliable.
+Temperature experimentation taught me that there's no "perfect" setting - it's all about trade-offs. Temperature 0 gave consistency but felt robotic. Temperature 2.0 was creative but inappropriate for health advice. Finding temperature 0.7 showed me that AI system design is about understanding your use case and making deliberate choices.
+The RAG implementation was challenging. I expected semantic search to make everything better, but my tests revealed limitations, the system missed information that was in the document and sometimes added outside knowledge. This taught me that more advanced doesn't always mean better. Sometimes a simpler solution that works reliably is better than a complex one that occasionally fails.
+This sprint taught me that building AI assistants is as much about understanding human needs as it is about technology. The technical skills are important, but the real challenge is designing systems that are trustworthy, helpful, and safe. I'm grateful for this hands-on experience because it gave me a realistic view of both the possibilities and the limitations of this technology.
